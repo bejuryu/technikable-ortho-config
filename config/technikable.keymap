@@ -11,7 +11,8 @@
 #define BAS_L 0
 #define EXT_L 1
 #define NUM_L 2
-#define NAV_L 3
+#define SYS_L 3
+#define NAV_L 4
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 
@@ -25,7 +26,7 @@
 
         tri_layer {
             if-layers = <EXT_L NUM_L>;
-            then-layer = <SYM_L>;
+            then-layer = <SYS_L>;
         };
     };
 
