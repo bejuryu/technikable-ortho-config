@@ -9,9 +9,9 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define BAS_L 0
-#define NAV_L 1
+#define EXT_L 1
 #define NUM_L 2
-#define SYM_L 3
+#define NAV_L 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 
@@ -24,7 +24,7 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <NAV_L NUM_L>;
+            if-layers = <EXT_L NUM_L>;
             then-layer = <SYM_L>;
         };
     };
@@ -73,6 +73,7 @@
         };
 
         nav_layer {
+            label = "Nav";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans          &kp UP_ARROW    &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
