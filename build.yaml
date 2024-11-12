@@ -20,4 +20,4 @@
 include:
   - board: technikable
   - board: technikable@1.1
-    cmake-args: -DCONFIG_BT_CTLR_PHY_2M=n
+    cmake-args: -DCONFIG_ZMK_BLE_EXPERIMENTAL_FEATURES=y -DCONFIG_BT_GATT_ENFORCE_SUBSCRIPTION=n
