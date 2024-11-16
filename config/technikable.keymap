@@ -56,7 +56,7 @@
         num_layer {
             label = "Num";
             bindings = <
-&kp GRAVE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5         &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0       &kp BACKSPACE
+&kp GRAVE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5         &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0       &kp DELETE
 &kp DELETE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp F4        &kp F5               &kp F6        &kp MINUS     &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BSLH
 &kp ESC     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp F10       &kp F11              &kp F12       &kp NUHS      &kp NUBS      &kp PAGE_UP       &kp PAGE_DOWN      &trans
                           &kp NUMBER_0  &trans        &trans        &none         &none  &trans        &trans        &trans
@@ -68,7 +68,7 @@
             bindings = <
 &trans            &trans  &trans            &trans          &trans  &trans          &trans  &trans  &trans    &kp UP    &kp PAGE_UP        &kp PAGE_DOWN
 &kp LEFT_CONTROL  &trans  &trans            &trans          &trans  &trans          &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT          &trans
-&kp ESC           &trans  &trans            &trans          &trans  &trans          &trans  &trans  &trans    &trans    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&kp LEFT_ALT      &trans  &trans            &trans          &trans  &trans          &trans  &trans  &trans    &trans    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
                           &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
