@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define BAS_L 0
@@ -36,50 +37,50 @@
         base_layer {
             label = "Base";
             bindings = <
-&kp TAB           &kp Q  &kp W     &kp E     &kp R      &kp T                 &kp Y      &kp U      &kp I          &kp O    &kp P     &kp BACKSPACE
-&kp LEFT_CONTROL  &kp A  &kp S     &kp D     &kp F      &kp G                 &kp H      &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LSHFT         &kp Z  &kp X     &kp C     &kp V      &kp B                 &kp N      &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp RET
-                         &kp LGUI  &kp LALT  &mo EXT_L  &kp SPACE  &kp SPACE  &mo NUM_L  &mo NAV_L  &kp RIGHT_ALT
+&kp TAB           &kp Q  &kp W     &kp E     &kp R      &kp T                 &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
+&kp LEFT_CONTROL  &kp A  &kp S     &kp D     &kp F      &kp G                 &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT         &kp Z  &kp X     &kp C     &kp V      &kp B                 &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+                         &kp LGUI  &kp LALT  &mo EXT_L  &kp SPACE  &kp SPACE  &mo NUM_L  &mo NAV_L  &kp ESC
             >;
         };
 
         ext_layer {
             label = "Ext";
             bindings = <
-&kp TILDE   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp DOLLAR  &kp PERCENT          &kp CARET  &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DEL
-&kp DELETE  &kp F1           &kp F2        &kp F3     &kp F4      &kp F5               &kp F6     &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
-&kp LANG1   &kp F7           &kp F8        &kp F9     &kp F10     &kp F11              &kp F12    &kp LS(NUHS)    &kp LS(NUBS)  &kp HOME              &kp END                &trans
-                             &kp LEFT_GUI  &kp LANG2  &trans      &trans       &trans  &trans     &trans          &trans
+&kp TILDE       &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR  &kp PERCENT          &kp CARET  &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DEL
+&kp LCTRL       &kp F1           &kp F2        &kp F3        &kp F4      &kp F5               &kp F6     &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
+&kp LEFT_SHIFT  &kp F7           &kp F8        &kp F9        &kp F10     &kp F11              &kp F12    &kp LS(NUHS)    &kp LS(NUBS)  &kp HOME              &kp END                &trans
+                                 &kp LEFT_GUI  &kp LEFT_ALT  &trans      &trans       &trans  &trans     &trans          &kp LANG1
             >;
         };
 
         num_layer {
             label = "Num";
             bindings = <
-&kp GRAVE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5         &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0       &kp DELETE
-&kp DELETE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp F4        &kp F5               &kp F6        &kp MINUS     &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BSLH
-&kp ESC     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp F10       &kp F11              &kp F12       &kp NUHS      &kp NUBS      &kp PAGE_UP       &kp PAGE_DOWN      &trans
-                          &kp NUMBER_0  &trans        &trans        &none         &none  &trans        &trans        &trans
+&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5         &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0       &kp DELETE
+&kp LCTRL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp F4        &kp F5               &kp F6        &kp MINUS     &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BSLH
+&kp LSHFT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp F10       &kp F11              &kp F12       &kp NUHS      &kp NUBS      &kp PAGE_UP       &kp PAGE_DOWN      &trans
+                         &kp NUMBER_0  &kp LALT      &trans        &none         &none  &trans        &trans        &kp LANG2
             >;
         };
 
         nav_layer {
             label = "Nav";
             bindings = <
-&trans            &trans  &trans            &trans          &trans  &trans          &trans  &trans  &trans    &kp UP    &kp PAGE_UP        &kp PAGE_DOWN
-&kp LEFT_CONTROL  &trans  &trans            &trans          &trans  &trans          &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT          &trans
-&kp LEFT_ALT      &trans  &trans            &trans          &trans  &trans          &trans  &trans  &trans    &trans    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
-                          &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &trans  &trans  &trans        &trans  &trans          &trans  &trans  &trans             &kp UP           &kp PAGE_UP  &kp PAGE_DOWN
+&kp LEFT_CONTROL  &trans  &trans  &trans        &trans  &trans          &trans  &trans  &kp LEFT           &kp DOWN         &kp RIGHT    &trans
+&kp LEFT_SHIFT    &trans  &trans  &trans        &trans  &trans          &trans  &trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp HOME     &kp END
+                          &trans  &kp LEFT_ALT  &trans  &trans  &trans  &trans  &trans  &kp CAPS
             >;
         };
 
         sys_layer {
             label = "Sys";
             bindings = <
-&bt BT_CLR  &trans        &trans        &trans        &trans        &trans                &trans  &trans         &trans         &bootloader    &trans         &sys_reset
-&trans      &trans        &trans        &trans        &trans        &trans                &trans  &trans         &trans         &trans         &trans         &trans
-&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4          &trans  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
-                          &trans        &trans        &trans        &trans        &trans  &trans  &trans         &trans
+&ext_power EP_ON  &ext_power EP_OFF  &bt BT_CLR_ALL  &trans        &trans        &trans          &trans  &trans         &trans         &bootloader    &trans         &sys_reset
+&bt BT_CLR        &trans             &trans          &trans        &trans        &trans          &trans  &trans         &trans         &trans         &trans         &trans
+&trans            &bt BT_SEL 0       &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &trans          &trans  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &trans
+                                     &trans          &trans        &trans        &trans  &trans  &trans  &trans         &trans
             >;
         };
     };
